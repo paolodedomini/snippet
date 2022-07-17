@@ -1,0 +1,86 @@
+# GIT WORKFLOW
+WORKING > STAGING > REPOSITORY
+
+
+----------------------------------------
+
+# inizializza un progetto git locale
+git init
+
+# porta in staging tutte le modifiche fatte
+git add .
+
+# porta in REPOSITORY le modifiche presenti in staging
+git commit -m "**"
+
+#porta le modifiche direttamente da WORKING a REPOSITORY
+git commit -am "**" 
+
+----------------------------------------
+DIFFERENZE TRA FILE NEL WORKING TREE
+
+# mostra le differenze tra i file in STAGING e WORKING
+ git diff 
+ 
+# mostra le differenze tra WORKING e REPOSITORY
+ git diff --staged
+
+# mostra le differenze tra due commit
+git diff <sha>..<sha>
+
+# mostra le differenze tra le varie commit (tasti f/b per avanzare o tornare in schermata)
+git show <sha>
+
+----------------------------------------
+
+RECUPERARE I FILE NEL WORKING TREE
+
+# riporta un file salvato in WORKING allo stato precedente
+git checkout -- <nome file>
+
+# riporta un file salvato da STAGING in WORKING
+git reset HEAD <nome file>
+
+# recoupera un file da una commit precedente
+git checkout <sha> -- <nome file>
+
+# tornare alla commit precedente e crea una nuova commit
+git revert <sha>
+
+----------------------------------------
+
+BRANCH
+
+# lista branch
+git branch 
+
+# crea nuovo branch
+git branch <nomebranch>
+
+# crea branch e switch
+git checkout -b <nomebranch>
+
+# compara branch
+git diff <nomebranch>..<nomebranch>
+
+# rinomina branch (spostarsi sul branch da rinominare)
+git -m <nuovo nome branch> 
+
+# eliminare un branch (da un altro branch)
+git -d <nome branch da eliminare>
+
+# riportare il branch ad uno stato precedente eliminando tutto quello scritto dopo.
+git reset --hard <sha>
+
+REMOTE
+
+# Set a new remote
+git remote add <nome generico del remote es.origin> https://github.com/user/repo.git
+
+git remote set-url <nome remote> <new.git.url/here>
+
+# Verify new remote
+git remote -v
+
+#delete remote branch
+git push origin --delete test
