@@ -1,0 +1,16 @@
+DEFAULT PASSWORD:
+root/passwordservervps
+
+INSTALLARE MYSQL
+Unusedmodules > mysql
+
+WEBMIN COMANDI PRINCIPALI
+service webmin start/stop/restare
+
+
+FILE DI CONFIGURAZIONE
+ \etc\webmin\miniserv.conf
+ 
+ SSL PROBLEMA DI ACCESSO
+ nano /etc/webmin/miniserv.conf
+ now change ssl=0 into ssl=1
