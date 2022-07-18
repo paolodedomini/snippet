@@ -1,0 +1,10 @@
+
+# FORM
+
+Builder form cont react-hook-form
+https://react-hook-form.com/form-builder/
+
+#esempio campo textarea con controllo su require
+
+<textarea {...register("noteAlert", { required: true })} name="noteAlert" rows="4" cols="30" id="note-alert" />
+{errors.noteAlert && <span> This field is required</span>}
